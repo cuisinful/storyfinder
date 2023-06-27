@@ -1,0 +1,98 @@
+<html>
+<head>
+    <title>Story Finder</title>
+    <!-- load the jsons -->
+    <!-- load the css from the site -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="tagcategories.json.js"></script>
+    <script src="sortedtable.js"></script>
+    <link rel="stylesheet" type="text/css" href="default.css">
+    <link rel="stylesheet" type="text/css" href="tagcloud.css">
+
+    <script>
+        function addOptions() {
+            for (var group in tagCategoriesDict) {
+                categories = tagCategoriesDict[group];
+                
+                //var groupdiv = d3.select("#tag-container")
+                //                 .classed("taggroup", true);
+
+                var groupdiv = d3.select("#tag-container").insert("div").classed("taggroup",true)
+
+                groupdiv.append("span")
+                        .classed("tagtitle", true)
+                        .html(group + "<br>")
+                
+                for (var category of categories) {
+                    d3dat = [ category + "_yes", category + "_no"];
+
+                    groupdiv.selectAll("nothing").data(d3dat).enter().append("input")
+                                                .attr("type", "radio")
+                                                .attr("name", category)
+                                                .attr("value", (d) => d)
+                                                .classed("tagopt", true)
+                    groupdiv.append("label").text(category)
+                    groupdiv.append("br")
+                }
+            }
+            
+            // make them work on button press
+            const buttons = d3.selectAll('input');
+            buttons.on('change', filterStories);
+        }
+
+        // use raw data and selected filters to return a list of dictionaries of stories
+        function filterStories() {
+            // apply each filter to full set
+            var subset = [...allstories];
+            d3.selectAll("input:checked").each((d) => {
+                [tag, yn] = d.split("_");
+                subset = subset.filter(x => yn=="yes" ? x.tags.includes(tag) : ! x.tags.includes(tag));
+            });
+
+            // send filtered data
+            theTable.setData(subset);
+        }
+
+
+        //const tableContent = document.getElementById("table-content")
+        //const tableButtons = document.querySelectorAll("th button");
+
+        function startupTable() {
+            // format the tags data as a string
+            for (row of allstories) {
+                row["taglist"] = row.tags.join(", ");
+            }
+
+            // create table object in the container div and draw it
+            tableDiv = d3.select("#table-container");
+            theTable = new SortedTable(tableDiv, 
+                                       allstories, 
+                                       colOrder = ["title", "author", "taglist", "postdate", "ranking", "stars", "views"], 
+                                       colInfo = {"title": {"header": "Title", "width": 12}});
+            theTable.drawTable();
+        }
+
+        // load data, setup table and tag buttons
+        function init() { 
+            d3.json("allstories.json", 
+                    function(jsondata) { 
+                        allstories = jsondata;
+                        startupTable();
+                        addOptions();
+                    });
+        }
+
+    </script>
+</head>
+
+<body onload="init();">
+    (the buttons next to the tags represent <font color="#aaaaaa">yes</font> and <font color="#aaaaaa">no</font>.  reload to reset.)
+
+    <div id="tag-container"></div>
+
+    <!-- draw table so that it allows sorting -->
+    <div id="table-container"></div>
+</body>
+
+</html>

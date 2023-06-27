@@ -1,0 +1,274 @@
+HTML	{ height: 100%; }
+
+BODY	{ font-family: verdana, tahoma, arial; 
+		  font-size: 12px; 
+		  min-height: 150%; 
+		  background: #663433; }	
+		  	  	
+TD		{ font-family: verdana, tahoma, arial; 
+		  font-size: 12px; }
+
+P		{ text-align: justify; }
+
+UL		{ list-style-type: none;
+		  padding: 0;
+		  margin: 0;
+		}
+
+UL LI		{ background-image: url( '../images/icons/sm_arrow.jpg' );
+		  background-repeat: no-repeat;
+		  background-position: 0 .2em;
+		  padding-left: 1.3em;
+		}
+
+/* additions */
+table {
+	background-color: #eee;
+}
+
+BODY A:link		{color: black; text-decoration: underline; font-size:12px;}        
+BODY A:visited	{color: black; text-decoration: underline; font-size:12px;} 
+BODY A:hover	{color: #663433; text-decoration: none; font-size:12px;}    
+BODY A:active	{color: black; text-decoration: underline; font-size:12px;}       
+
+.faqbig		{ color: #663433; font-size: 16px; font-weight: 600; }
+.faqQ		{ color: black; font-weight:600; }
+.faqA		{ margin: 10px 80px 10px 10px; }
+.linkH		{ color: black; font-weight:600; text-decoration: underline; }
+.title		{ color: black; font-size: 14px; font-weight:800; text-decoration: underline; }
+.storytitle	{ color: #283723; font-size: 14px; font-weight: 800; }
+.storysub	{ color: #274039; font-size: 10px; }
+.dropdown	{ height: 18px; font-size: 10px; }
+.checkbox	{ vertical-align: middle; }
+.codelist	{ font-size: 10px; color: #663433 }
+.codelist B	{ font-size: 10px; color: #000000 }
+.defMargin	{ margin: 20px; }
+.cartSelect { color: #ff6500; font-weight: 600; }
+.seo				{ display:none; }
+
+
+/*only apply css to devices with screen smaller than 480px */
+@media only screen and (max-device-width: 480px) { 
+  * {max-width: 100%;} /* make every element maximum as wide as the device screen */
+  table {width: 100%;} /* make all table elements as wide as the device screen (some table elements have width="750" attribute in html) */
+  div > table > tbody > tr > td > div > table > tbody > tr > td { float: left; }  /* move "latest stories" below the news articles */
+  div > table div > table > tbody > tr > td > table > tbody > tr > td > div + div { width: 100px; } /* fix news headers pushing the right side of the page */
+  table[width="100%"] td { float: left; } /* fix header and menu */
+  td[width="370"], td[width="400"] { width: auto; } /* fix some fixed width td element making the page wider than necessary */
+}
+
+/* hover stuff */
+
+ div#container {
+  width: 580px;
+  margin: 100px auto 0 auto;
+  padding: 20px;
+  background: #000;
+  border: 1px solid #1a1a1a;
+}
+
+div.profile {
+  width: 70px;
+  text-align: center;
+  float: left;
+  margin: 10px 37px 30px 38px;
+}
+
+span.name {
+  display: block;
+  padding-top: 5px;
+}
+
+div.pop-up {
+  display: none;
+  text-align: left;
+  position: absolute;
+  margin-top: -100px;
+  width: 120px;
+  padding: 0px 13px;
+  background: #eeeeee;
+  color: #000000;
+  border: 1px solid #1a1a1a;
+  font-size: 90%;
+}
+
+/* old stuff */
+
+.cartoonMatrix { border:1px solid #000000; 
+				 padding: 4px; 
+				 background: #efefef; }
+
+.commentbox { border: 2px solid #ccabaa; 
+			  margin: 10px; 
+			  padding: 4px;
+			  background: white; }
+
+.news		{ background-image:url('../images/icons/bar_large_3.jpg'); 
+			  background-repeat: no-repeat;
+			  color: white;
+			  font-size: 12px; 
+			  font-weight: 600;
+			  height: 25px;
+			 }
+
+.slist		{ background-image:url('../images/icons/bar_small_2.jpg'); 
+			  background-repeat: no-repeat;
+			  color: white;
+			  font-size: 12px; 
+			  font-weight: 600;
+			  height: 25px;
+			 }
+
+.stats		{ background-image: url('../images/icons/bar_small_3.jpg');
+			  background-repeat: no-repeat;
+			  color: white;
+			  font-size: 12px; 
+			  font-weight: 600;
+			  height: 25px;
+			 }
+
+.titlebar	{ background-image: url('../images/icons/bar_medium_2.jpg');
+			  background-repeat: no-repeat;
+			  color: white;
+			  font-size: 12px; 
+			  font-weight: 600;
+			  height: 25px;
+			 }
+
+.footmenu	{ background-image:url('../images/header/top_footer.jpg'); 
+			  background-repeat: no-repeat;
+			  color: #ff6500;
+			  font-size: 12px; 
+			  font-weight: 600;
+			  height: 74px;
+			 }
+
+.headerstats	{	color: #ffffff;	font-size: 10px; }
+.headerstats TD	{	color: #ffffff;	font-size: 10px; }
+				
+.footmenu		A:link		{color: #ff6500; text-decoration: none; font-size:12px;}        
+.footmenu		A:visited	{color: #ff6500; text-decoration: none; font-size:12px;} 
+.footmenu		A:hover		{color: #ff6500; text-decoration: underline; font-size:12px;}    
+.footmenu		A:active	{color: #ff6500; text-decoration: none; font-size:12px;}       
+
+.showall	{ color: black; 
+			  position: relative; 
+			  top:4px; 
+			  left:5px; 
+			  font-size: 9px; 
+			  font-weight: 100; 
+			}
+.showall		A:link		{color: #663433; text-decoration: none; font-size:9px;}        
+.showall		A:visited	{color: #663433; text-decoration: none; font-size:9px;} 
+.showall		A:hover		{color: #663433; text-decoration: underline; font-size:9px;}    
+.showall		A:active	{color: #663433; text-decoration: none; font-size:9px;}       
+
+.gallery	{ color: #663433; 
+			  font-size: 10px; 
+			  font-weight: 100;
+			}
+.gallery		A:link		{color: #443433; text-decoration: none; font-size:11px; font-weight:bold;}        
+.gallery		A:visited	{color: #443433; text-decoration: none; font-size:11px; font-weight: bold;} 
+.gallery		A:hover		{color: #ff6500; text-decoration: none; font-size:11px; font-weight:bold;}    
+.gallery		A:active	{color: #443433; text-decoration: none; font-size:11px; font-weight:bold;}       
+
+.adminmenu	{ color: ccabaa; 
+			  font-size: 11px; 
+			  font-weight: 100; 
+			}
+.adminmenu		A:link		{color: black; text-decoration: none; font-size:11px;}        
+.adminmenu		A:visited	{color: black; text-decoration: none; font-size:11px;} 
+.adminmenu		A:hover		{color: #663433; text-decoration: underline; font-size:11px;}    
+.adminmenu		A:active	{color: black; text-decoration: none; font-size:11px;}       
+
+.email		{ color: black; 
+			  position: relative; 
+			  top:-1px; 
+			  left:0px; 
+			  font-size: 9px; 
+			  font-weight: 100; 
+			}
+.email			A:link		{color: #663433; text-decoration: none; font-size:9px;}        
+.email			A:visited	{color: #663433; text-decoration: none; font-size:9px;} 
+.email			A:hover		{color: #663433; text-decoration: underline; font-size:9px;}    
+.email			A:active	{color: #663433; text-decoration: none; font-size:9px;}       
+
+.keyPromo		A:link		{background: #ccabaa; text-decoration: none; font-size:12px; font-weight: 800; }        
+.keyPromo		A:visited	{background: #ccabaa; text-decoration: none; font-size:12px; font-weight: 800; } 
+.keyPromo		A:hover		{background: #ccabaa; text-decoration: none; font-size:12px; font-weight: 800; }    
+.keyPromo		A:active	{background: #ccabaa; text-decoration: none; font-size:12px; font-weight: 800; }       
+
+.security1		A:link		{color: green; text-decoration: none; font-size:12px;}        
+.security1		A:visited	{color: green; text-decoration: none; font-size:12px;} 
+.security1		A:hover		{color: green; text-decoration: underline; font-size:12px;}    
+.security1		A:active	{color: green; text-decoration: none; font-size:12px;}
+
+.security2		A:link		{color: red; text-decoration: none; font-size:12px;}        
+.security2		A:visited	{color: red; text-decoration: none; font-size:12px;} 
+.security2		A:hover		{color: red; text-decoration: underline; font-size:12px;}    
+.security2		A:active	{color: red; text-decoration: none; font-size:12px;}
+
+.security3		A:link		{color: blue; text-decoration: none; font-size:12px;}        
+.security3		A:visited	{color: blue; text-decoration: none; font-size:12px;} 
+.security3		A:hover		{color: blue; text-decoration: underline; font-size:12px;}    
+.security3		A:active	{color: blue; text-decoration: none; font-size:12px;}
+
+.watermark1	{ background: url('../images/stories/watermark1.jpg') no-repeat 10% 300px; }
+.watermark2	{ background: url('../images/stories/watermark2.jpg') no-repeat 10% 300px; }
+.watermark3	{ background: url('../images/stories/watermark3.jpg') no-repeat 10% 300px; }
+.watermark4	{ background: url('../images/stories/watermark4.jpg') no-repeat 10% 300px; }
+
+.input {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	line-height: normal;
+	color: #333333;
+	height: 18px;
+}
+
+.textinput {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	line-height: normal;
+	color: #333333;
+}
+
+
+#navLink {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: 3E474E;
+	text-decoration: none;
+}
+#navLink	A:link		{color: black; text-decoration: none; font-size:11px;}        
+#navLink	A:visited	{color: black; text-decoration: none; font-size:11px;} 
+#navLink	A:hover		{color: #88421b; text-decoration: none; font-size:11px;}    
+#navLink	A:active	{color: black; text-decoration: none; font-size:11px;}       
+
+
+.my_banner_class TD {
+  font-family: arial,sans-serif,helvetica;
+  font-size: 12px;
+  color: #FFF5F6;
+  text-align: center;
+}
+.my_banner_class .title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333;
+}
+.my_banner_class .handle {
+  color: red;
+}
+.my_banner_class .age_gender {
+  color: blue;
+}
+.my_banner_class .location {
+  font-size: 10px;
+  color: #000000;
+}
+.my_banner_class A {
+  color: #000000;
+  font-weight: 600;
+}
+

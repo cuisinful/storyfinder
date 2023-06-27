@@ -1,0 +1,245 @@
+﻿
+/* additions */
+div.taggroup {
+	color: #ddd; 
+    width: 150px;
+    height: 110px;
+    float: left;
+    overflow-y: scroll;
+    margin: 5px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.table-container {
+  margin: auto;
+  max-width: 1200px;
+  min-height: 100vh;
+  overflow: scroll;
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+thead tr {
+  border-bottom: 1px solid #999;
+  border-top: 1px solid #ddd;
+  height: 1px;
+}
+
+th {
+  font-weight: bold;
+  height: inherit;
+  padding: 0;
+  padding-bottom: 10px;
+}
+
+th:not(:first-of-type) {
+  border-left: 1px solid #ddd;
+}
+
+th button {
+  background-color: #eee;
+  border: none;
+  cursor: pointer;
+  display: block;
+  font: inherit;
+  height: 100%;
+  margin: 0;
+  min-width: max-content;
+  padding: 0.5rem 1rem;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+
+th button::after {
+  position: absolute;
+  right: 0.5rem;
+}
+
+th button[data-dir="asc"]::after {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpolygon points='0, 0 8,0 4,8 8' fill='%23818688'/%3E%3C/svg%3E");
+}
+
+th button[data-dir="desc"]::after {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpolygon points='4 0,8 8,0 8' fill='%23818688'/%3E%3C/svg%3E");
+}
+
+tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+td {
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+
+footer {
+  background-color: #ffdfb9;
+  margin: 2rem -8px -8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+footer .heart {
+  color: #dc143c;
+}
+
+
+
+
+input.tagopt {
+    margin: 0px;
+}
+
+/* ORIGinal */
+
+#tagcloud 
+{
+    margin: 0 auto;
+    padding: 5px 5px 5px 5px;
+    /* background-color: #efefef;
+    border: solid 3px #ff6501; */
+    width: 90%;
+	font: normal 100%/2.0em 'Trebuchet MS', Tahoma, sans-serif;
+    font-weight: bold;
+    color: #669f41;
+}
+
+#tagcloud p 
+{
+	position: relative; top: -20px;
+    text-align: justify;
+}
+
+#tagcloud a { background: inherit; }
+
+#taginfo-left
+{
+    float: left;
+    width: 55%;
+    position: relative;
+    height: 80px;
+
+    margin: 0 auto;
+    padding: 5px 5px 5px 5px;
+    background-color: #292929;
+    border: solid 3px #669f41;
+}
+#taginfo-right
+{
+    width: 40%;
+    float: right;
+    height: 80px;
+
+    margin: 0 auto;
+    padding: 5px 5px 5px 5px;
+    background-color: #292929;
+    border: solid 3px #669f41;
+	font: normal 100%/2.0em 'Trebuchet MS', Tahoma, sans-serif;
+    font-weight: bold;
+    color: #669f41;
+}
+#taginfo-right a:hover { background: inherit; color:#669f41; border-bottom: dotted 2px; text-decoration: none;}
+
+.vertcenter
+{
+        vertical-align: middle;
+}
+
+.tagtitle 
+{
+    font-size: 16px;
+    color: White;
+    font-weight: bold;
+}
+
+.clear 
+{
+    clear:both;
+}
+
+.tagrank5
+{
+    color: #333;
+    font-size: 12px;
+    white-space: nowrap;
+}
+a.tagrank5:link { border-bottom: none; color: transparent; }
+a.tagrank5:visited { border-bottom: none; color: transparent; }
+a.tagrank5:hover { background: inherit; color:#333; border-bottom: dashed 2px; text-decoration: none;}
+a.tagrank5:active { border-bottom: none; color: transparent; }
+
+.tagrank4
+{
+    color: #993433;
+    font-size: 13px;
+    white-space: nowrap;
+}
+a.tagrank4:link { border-bottom: none; color: transparent; font-weight: bold; }
+a.tagrank4:visited { border-bottom: none; color: transparent; font-weight: bold; }
+a.tagrank4:hover { background: inherit; color:#993433; border-bottom: dashed 2px; text-decoration: none; font-weight: bold; }
+a.tagrank4:active { border-bottom: none; color: transparent; font-weight: bold; }
+
+/* 10-30% of the tags */
+.tagrank3
+{
+    color: #aa3333;
+    font-size: 14px;
+    white-space: nowrap;
+}
+a.tagrank3:link { border-bottom: none; color: transparent; }
+a.tagrank3:visited { border-bottom: none; color: transparent; }
+a.tagrank3:hover { background: inherit; color: #aa3333; border-bottom: dashed 2px; text-decoration: bold;}
+a.tagrank3:active { border-bottom: none; color: transparent; }
+
+/* 30-60% of the tags */
+.tagrank2
+{
+    color: #333366;
+    font-size: 15px;
+    white-space: nowrap;
+}
+a.tagrank2:link { border-bottom: none; color: transparent; }
+a.tagrank2:visited { border-bottom: none; color: transparent; }
+a.tagrank2:hover { background: inherit; color: #000099; border-bottom: dashed 2px; text-decoration: none;}
+a.tagrank2:active { border-bottom: none; color: transparent; }
+
+/* 60-90% of the tags */
+.tagrank1
+{
+    color: #ff6501;
+    font-size: 16px;
+    white-space: nowrap;
+}
+a.tagrank1:link { border-bottom: none; color: transparent; }
+a.tagrank1:visited { border-bottom: none; color: transparent; }
+a.tagrank1:hover { background: inherit; color: #ff6501; border-bottom: dashed 2px; text-decoration: none;}
+a.tagrank1:active { border-bottom: none; color: transparent; }
+
+/* ADMIN CSS */
+
+#adminbox
+{
+    margin: 0 auto;
+    padding: 5px 5px 5px 5px;
+    background-color: #292929;
+    border: solid 3px #669f41;
+    width: 100%;
+	font: normal 100%/2.0em 'Trebuchet MS', Tahoma, sans-serif;
+    font-weight: bold;
+    color: #669f41;
+}
