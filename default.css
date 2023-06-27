@@ -26,12 +26,12 @@ table {
 	background-color: #eee;
 }
 
-div.NB {
+.NB {
 	color: #ddd;
 	background-color: #663433;
 }
 
-span.yesno {
+.yesno {
 	color: #aaa;
 }
 
