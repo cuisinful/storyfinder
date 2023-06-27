@@ -26,6 +26,15 @@ table {
 	background-color: #eee;
 }
 
+div.NB {
+	color: #ddd;
+	background-color: #663433;
+}
+
+span.yesno {
+	color: #aaa;
+}
+
 BODY A:link		{color: black; text-decoration: underline; font-size:12px;}        
 BODY A:visited	{color: black; text-decoration: underline; font-size:12px;} 
 BODY A:hover	{color: #663433; text-decoration: none; font-size:12px;}    
